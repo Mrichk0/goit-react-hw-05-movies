@@ -1,0 +1,11 @@
+.reviewsElement {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.reviewsList {
+  margin-top: 40px;
+  padding: 20px;
+}

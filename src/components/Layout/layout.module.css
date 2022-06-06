@@ -1,0 +1,31 @@
+.linkActive {
+  color: rgb(236, 204, 97);
+  font-size: 22px;
+}
+
+.link {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 22px;
+}
+
+.menu {
+  background-color: rgb(14, 116, 116);
+  margin: 0;
+}
+
+.menuNav {
+  text-decoration: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menuBtn {
+  margin: 25px;
+}
+
+.container {
+  padding: 20px;
+}

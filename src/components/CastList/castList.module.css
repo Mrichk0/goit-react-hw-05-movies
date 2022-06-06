@@ -1,0 +1,10 @@
+.castElement {
+  list-style: none;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 25px;
+}
+
+.castList {
+  margin-top: 45px;
+}
