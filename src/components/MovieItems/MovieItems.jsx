@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import styles from './movieItems.module.css';
 
 const MovieItems = ({
-  data: { poster_path, title, vote_average, overview, genresName },
+  data: { poster_path, title, vote_average, overview },
   id,
   goBack,
   from,
+  genres,
 }) => {
   return (
     <>
@@ -28,7 +29,7 @@ const MovieItems = ({
               <h2>Overview</h2>
               <p>{overview}</p>
               <h2>Genres</h2>
-              <p>{genresName}</p>
+              <div className={styles.genres}>{genres}</div>
             </div>
             <div />
           </div>

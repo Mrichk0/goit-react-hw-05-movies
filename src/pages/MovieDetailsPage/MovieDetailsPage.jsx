@@ -1,12 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import {
-  Link,
-  useParams,
-  Outlet,
-  useNavigate,
-  useLocation,
-} from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 
 import { getMovieById } from '../../shared/api/films';
 import MovieItems from 'components/MovieItems';
@@ -48,12 +42,30 @@ const MovieDetailsPage = () => {
   const { response, loading, error } = state;
   const isData = Boolean(Object.values(response).length);
 
+  console.log('RES', response);
   const { data } = response;
+
+  const genres = data?.genres.map(({ id, name }) => {
+    return (
+      <div key={id}>
+        <p style={{ marginRight: '15px ' }}>{name}</p>
+      </div>
+    );
+  });
+
   return (
     <>
       {loading && <p>...Loading</p>}
       {error && <p>{error}</p>}
-      {isData && <MovieItems goBack={goBack} data={data} id={id} from={from} />}
+      {isData && (
+        <MovieItems
+          goBack={goBack}
+          data={data}
+          id={id}
+          from={from}
+          genres={genres}
+        />
+      )}
     </>
   );
 };
